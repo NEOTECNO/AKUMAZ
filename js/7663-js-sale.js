@@ -28,6 +28,18 @@ const incrementMintAmount = async (e) => {
   document.getElementById('tokens_amount').value = newMintAmount;
 };
 
+/*
+//Retrieve values from contract on page load
+window.addEventListener('load', async () => {
+    const web3 = new Web3(window.ethereum);
+    const contract1 = new web3.eth.Contract(abi, CONTRACT_ADDR);
+    const totalStaked = await contract1.methods.totalSupply().call();
+    console.log(totalStaked);
+
+    document.getElementById("tokens_available").innerHTML = totalStaked + " / " + 1222;
+    })
+*/
+
 // PUBLIC MINT
 const mint = async (e)=> {
   if (typeof window.ethereum !== 'undefined') {
@@ -102,7 +114,7 @@ const whitelistMint = async (e)=> {
 				  addressSign = signatures[0];
 				  }
 			  
-			  value = (0 * _mintAmount);
+			  value = (costWL * _mintAmount);
 
 			  const gas = Math.round( await contract.methods.mintWhitelist(_mintAmount, addressSign).estimateGas({value: value.toString(), from: account}) * 1.1 );
 			  result = await contract.methods.mintWhitelist(_mintAmount, addressSign).send({value: value.toString(), from: account, gas: gas});
@@ -164,5 +176,7 @@ document.getElementById('mint_button').onclick = whitelistMint;
 const signatures = [
   '0x0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000',
   '0xF1267eB502BD576ADC0477116C03135DF05cf367',
-  '0xa803dc98f44b07f551285744b4ab126521acfd7ad5008c8c916e8bf9bc4cac890e5aa6b8a6aee57082e97832ac9af2d7aa759343705c4fd6333dac3eedb753aa1c'
+  '0x44d4906b5082e05d12ac64bf07bfc3d35e569f7fb44ed5655204e9c62b8520406bceb1ad6a46e7d464c8c1edc279b0fa98b02c774b145dded3aa4ff0c206f7ad1c',
+  '0x1fd9874872C2E9C53fc21023dd912D175371CCAf',
+  '0xd03cf7659aabc294441307d165a6df72240b41733aae150f64d656b3d994ca6177ec9117383e200a28c89adcab1315d7f02c9220d40382d1c283f87139a70e281b'
 ]
