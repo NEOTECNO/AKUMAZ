@@ -73,7 +73,7 @@ const wl_check = async (e)=> {
 					}
 				else
 					{
-					alert("Not whitelisted!")
+					alert("You are not whitelisted!")
 					console.log("NOT WHITELISTED");
 					document.getElementById("wl_check").innerHTML = "NOT WHITELISTED";
 					}
