@@ -18,14 +18,13 @@
                 <div class="header__row">
 
                     <div class="header__logo">
-                        <img src="images/img-logo.png" alt="logo site">
+                        <a href="https://www.akumaz.xyz/" target="_blank"><img src="images/img-logo.png" alt="logo site"></a>
                     </div>
 
                     <div class="header__center">
                         <a href="https://etherscan.io/address/0x596c6558e4BB6C87456734E316D75ac138a0A2F4" target="_blank" class="head-etherscan"></a>
                         <a href="https://opensea.io/collection/akumaz" target="_blank" class="head-opensea"></a>
                         <a href="https://twitter.com/AKUMAZ_NFT" target="_blank" class="head-twitter"></a>
-                        <a href="https://discord.gg/AKUMAZ_NFT" target="_blank" class="head-discord"></a>
                     </div>
 
                     <div class="header__right">                        
@@ -41,13 +40,16 @@
                 <div class="main__row">
                     <div class="main__left">
 
-                        <p class="form-text"> TOTAL MINTED </p> 
+                        <p class="form-text2"> TOTAL MINTED </p> 
                         <p class="number" id="tokens_available"> CONNECT </p> 
                         <p class="form-text" id="phase"> AKUMAZ IS HERE! </p> 
                         <p class="form-text" id="price"> WHITELIST MINT PHASE </p> <br>
                         
-                        <div class="form-row">
+                        <div class="form-wl-check">
+                            <button class="btn-form-wl" id="wl_check"> CHECK WHITELIST </button>
+                        </div>
 
+                        <div class="form-row">
                             
                             <div class="form-row-amount">
                                 <button class="btn-2" id="mintDW" onClick="decrementMintAmount()"> - </button>

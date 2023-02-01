@@ -307,6 +307,14 @@ body {
   -webkit-filter: drop-shadow(2px 2px 1px #000000);
 }
 
+.form-text2 {
+  font-size: 24px;
+  color: #ffffff;
+  font-weight: 800;
+  filter: drop-shadow(2px 2px 1px #000000);
+  -webkit-filter: drop-shadow(2px 2px 1px #000000);
+}
+
 .form-text-2 {
   font-size: 22px;
   color: #ffffff;
@@ -320,8 +328,18 @@ body {
   justify-content: center;
   height: 80px;
   align-items: center;
-  margin-top: 20px;
-  margin-bottom: 20px;
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
+.form-wl-check {
+  width: auto;
+  height: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  filter: drop-shadow(0px 0px 3px #ffffff);
+  -webkit-filter: drop-shadow(0px 0px 3px #ffffff);
 }
 
 .form-row-amount {
@@ -412,6 +430,29 @@ body {
   -webkit-filter: drop-shadow(0px 0px 4px #ffffff);
 }
 .btn-2:hover {
+  background-color: #ffffff;
+  color: #000000;
+}
+
+.btn-form-wl {
+  height: 50px;
+  text-align: center;
+  border-radius: 12px;
+  background-color: #000000;
+  padding: 0px 40px;
+  transition: all 0.4s ease 0s;
+  font-size: 15px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #ffffff;
+  -webkit-border-radius: 12px;
+  -moz-border-radius: 12px;
+  -ms-border-radius: 12px;
+  -o-border-radius: 12px;
+  filter: drop-shadow(0px 0px 4px #ffffff);
+  -webkit-filter: drop-shadow(0px 0px 4px #ffffff);
+}
+.btn-form-wl:hover {
   background-color: #ffffff;
   color: #000000;
 }
@@ -601,6 +642,11 @@ textarea.error {
     margin-top: 10px;
   }
 
+  .form-text2 {
+    font-size: 16px;
+    margin-top: 20px;
+  }
+
   .form {
     margin-top: 10px;
   }
@@ -692,6 +738,8 @@ textarea.error {
     flex-direction: column;
     align-items: center;
     padding-top: 10px;
+    margin-top: 30px;
+    margin-bottom: 20px;
   }
   .form-row-text {
     margin-top: 10px;
